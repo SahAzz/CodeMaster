@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz & Code Editor | CSE 1st Year Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing" class="container">
+        <div class="landing-content">
+            <h1 class="main-title">CodeMaster</h1>
+            <p class="main-subtitle">Learn • Code • Master</p>
+            
+            <div class="button-group">
+                <button class="nav-btn aboutus-btn" onclick="navigateTo('aboutus')">
+                    👥 About Us
+                </button>
+                <button class="nav-btn quiz-btn" onclick="navigateTo('quiz')">
+                    📝 Quiz Mode
+                </button>
+                <button class="nav-btn editor-btn" onclick="navigateTo('editor')">
+                    💻 Code Editor
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="aboutus" class="container hidden">
+        <button class="back-btn" onclick="navigateTo('landing')">← Back</button>
+        
+        <div class="content-wrapper">
+            <h1 class="page-title">About Us</h1>
+
+            <!-- Team Members Section (BOTTOM) -->
+            <div class="team-section">
+                <h2 class="section-subtitle">Development Team</h2>
+                
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="pic4.jpeg" alt="Team Member 1">
+                        </div>
+                        <div class="team-info">
+                            <h3>Sahaj Poudel</h3>
+                            <p class="role">BE CSE</p>
+                            <p class="bio">Passionate about web development and creating interactive learning platforms. Specializes in frontend development and user interface design.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="pic2.jpeg" alt="Team Member 2">
+                        </div>
+                        <div class="team-info">
+                            <h3>Sumit Raj Thakur</h3>
+                            <p class="role">BE CSE</p>
+                            <p class="bio">Enthusiastic about full-stack development and problem-solving. Focuses on backend logic and algorithm optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Acknowledgments/Guided By Section -->
+            <div class="acknowledgments-section">
+                <h2 class="section-subtitle">Guided By</h2>
+                
+                <div class="guide-card">
+                    <div class="guide-photo">
+                        <img src="pica.webp" alt="Dr. Abhisek">
+                    </div>
+                    <div class="guide-info">
+                        <h3>Dr. Abhisek</h3>
+                        <p class="guide-role">Faculty Mentor & Guide</p>
+                        <p class="guide-description">
+                            Dr. Abhisek has been instrumental in guiding this project with valuable insights, technical expertise, and mentorship. His constructive feedback and encouragement have shaped CodeMaster into a comprehensive learning platform. We are grateful for his continuous support and dedication to nurturing student talent.
+                        </p>
+                        <div class="guide-contributions">
+                            <span class="contribution-badge">Project Guidance</span>
+                            <span class="contribution-badge">Technical Review</span>
+                            <span class="contribution-badge">Mentorship</span>
+                            <span class="contribution-badge">Quality Assurance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SDG Goal Section (TOP) -->
+            <div class="sdg-main-section">
+                <h2 class="section-subtitle">Sustainable Development Goal Alignment</h2>
+                <div class="sdg-main-card">
+                    <div class="sdg-main-icon">4️⃣</div>
+                    <div class="sdg-main-content">
+                        <h3>SDG Goal 4: Quality Education</h3>
+                        <p class="sdg-tagline"><strong>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.</strong></p>
+                        
+                        <h4>How CodeMaster Contributes to SDG Goal 4:</h4>
+                        <div class="sdg-contributions">
+                            <div class="contribution-item">
+                                <span class="contribution-icon"></span>
+                                <div class="contribution-text">
+                                    <strong>Accessible Learning</strong>
+                                    <p>Makes quality programming education accessible to all students without barriers</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon"></span>
+                                <div class="contribution-text">
+                                    <strong>Interactive Tools</strong>
+                                    <p>Provides engaging and interactive learning platform for better understanding</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon"></span>
+                                <div class="contribution-text">
+                                    <strong>Self-Paced Learning</strong>
+                                    <p>Enables students to learn at their own pace without time constraints</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon"></span>
+                                <div class="contribution-text">
+                                    <strong>Future-Ready Skills</strong>
+                                    <p>Promotes skill development in high-demand fields of Computer Science</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon"></span>
+                                <div class="contribution-text">
+                                    <strong>Digital Literacy</strong>
+                                    <p>Supports digital literacy and technical competency development</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon"></span>
+                                <div class="contribution-text">
+                                    <strong>Theory to Practice</strong>
+                                    <p>Bridges the gap between theoretical knowledge and practical application</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Overview Section -->
+            <div class="project-section">
+                <h2 class="section-subtitle">About CodeMaster</h2>
+                
+                <div class="project-content">
+                    <div class="project-description">
+                        <p><strong>CodeMaster</strong> is an interactive web-based learning platform designed for Computer Science students to master programming concepts through hands-on practice.</p>
+                        
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li> <strong>Quiz Mode:</strong> Test your knowledge with multiple-choice questions across Python, JavaScript, and C Programming</li>
+                            <li> <strong>Code Editor:</strong> Write and validate code solutions for real-world programming challenges</li>
+                            <li> <strong>Smart Validation:</strong> Advanced code analysis that checks logical correctness, not just syntax</li>
+                            <li> <strong>Multi-Language Support:</strong> Practice in Python, JavaScript, and C Programming</li>
+                        </ul>
+                        
+                        <h4>Our Mission:</h4>
+                        <p>To empower students with practical programming skills and boost their confidence in coding through interactive learning and real-time feedback.</p>
+                    </div>
+
+                    <div class="project-benefits">
+                        <h4>Benefits for Students:</h4>
+                        <ul>
+                            <li> Learn programming fundamentals interactively</li>
+                            <li> Instant feedback on code solutions</li>
+                            <li> Track progress with quiz scoring</li>
+                            <li> Practice with real-world challenges</li>
+                            <li> Build confidence through repeated practice</li>
+                            <li> Master multiple programming languages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            
+        </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz" class="container hidden">
+        <button class="back-btn" onclick="navigateTo('landing')">← Back</button>
+        
+        <div class="content-wrapper">
+            <h1 class="page-title">Quiz Mode</h1>
+            
+            <!-- Subject Selector -->
+            <div id="subjectSelector" class="selector-panel">
+                <h2>Select Subject</h2>
+                <div class="button-group">
+                    <button class="subject-btn" onclick="loadQuiz('python')"> Python</button>
+                    <button class="subject-btn" onclick="loadQuiz('javascript')"> JavaScript</button>
+                    <button class="subject-btn" onclick="loadQuiz('c')"> C Programming</button>
+                </div>
+            </div>
+
+            <!-- Quiz Display -->
+            <div id="quizDisplay" class="quiz-panel hidden">
+                <div class="quiz-header">
+                    <h2 id="quizTitle">Quiz</h2>
+                    <div class="score-info">Score: <span id="score">0</span>/3</div>
+                </div>
+
+                <div id="questionsContainer" class="questions-list">
+                    <!-- Questions inserted here -->
+                </div>
+
+                <div class="quiz-actions">
+                    <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+                    <button class="btn btn-secondary" onclick="resetQuiz()">Reset</button>
+                </div>
+
+                <!-- Result -->
+                <div id="quizResult" class="result-panel hidden">
+                    <h2 id="resultTitle"></h2>
+                    <p id="resultMessage"></p>
+                    <p id="resultScore"></p>
+                    <button class="btn btn-primary" onclick="resetQuiz()">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code Editor Section -->
+    <div id="editor" class="container hidden">
+        <button class="back-btn" onclick="navigateTo('landing')">← Back</button>
+        
+        <div class="content-wrapper">
+            <h1 class="page-title">Code Editor</h1>
+            
+            <!-- Language/Challenge Selector -->
+            <div id="languageSelector" class="selector-panel">
+                <h2>Select Programming Language</h2>
+                <div class="button-group">
+                    <button class="subject-btn" onclick="loadCodingChallenge('python')"> Python</button>
+                    <button class="subject-btn" onclick="loadCodingChallenge('javascript')"> JavaScript</button>
+                    <button class="subject-btn" onclick="loadCodingChallenge('c')"> C Programming</button>
+                </div>
+            </div>
+
+            <!-- Coding Challenge Display -->
+            <div id="codingDisplay" class="coding-panel hidden">
+                <div class="coding-header">
+                    <h2 id="challengeTitle">Challenge</h2>
+                </div>
+
+                <!-- Challenge Description -->
+                <div class="challenge-section">
+                    <h3>📌 Problem:</h3>
+                    <div id="challengeDescription" class="description-box">
+                        <!-- Challenge description inserted here -->
+                    </div>
+                </div>
+
+                <!-- Code Editor -->
+                <div class="code-section">
+                    <h3> Write Code:</h3>
+                    <textarea id="codeInput" class="code-editor" placeholder="// Write your code here"></textarea>
+                </div>
+
+                <!-- Test Cases Info -->
+                <div class="test-section">
+                    <h3>✓ Test Cases:</h3>
+                    <div id="testCasesInfo" class="test-info-box">
+                        <!-- Test cases info inserted here -->
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="coding-actions">
+                    <button class="btn btn-primary" onclick="runCode()">Run Code</button>
+                    <button class="btn btn-secondary" onclick="resetCode()">Reset</button>
+                </div>
+
+                <!-- Output -->
+                <div id="output" class="output-box hidden">
+                    <h3> Results:</h3>
+                    <div id="outputContent" class="output-content">
+                        <!-- Results inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
